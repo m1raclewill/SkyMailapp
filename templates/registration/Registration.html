@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Registration.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="registration-form">
+            <h1>SkyMail</h1>
+            <h2>Register</h2>
+            <form id="registrationForm" method="POST" action="{{ url_for('register') }}">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="emailName">Email</label>
+                <input type="email" id="emailName" name="emailName" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit" id="registerButton">Sign up</button>
+                <p>
+                    Already have an account?
+                    <a href="{{ url_for('auth') }}" class="login-link">Login here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/Registration.js') }}"></script>
+</body>
+</html>
+

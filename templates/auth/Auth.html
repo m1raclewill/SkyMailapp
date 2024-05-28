@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Auth.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <div class="registration-form">
+            <h1>SkyMail</h1>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="skyname">Email</label>
+                <input
+                    type="email"
+                    id="skyname"
+                    name="skyname"
+                    placeholder="Enter your email"
+                />
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                />
+
+                <button id="loginButton">Login</button>
+                <p>
+                    Have an account yet?
+                    <a href="{{ url_for('register') }}" class="login-link">Register here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/Auth.js') }}"></script>
+</body>
+</html>
+

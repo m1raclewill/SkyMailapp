@@ -1,0 +1,396 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 70px); /* Уменьшить высоту для учета заголовка */
+}
+
+.header {
+    height: 50px; /* Высота заголовка */
+    background-color: #f8f9fa; /* Цвет фона заголовка */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Разместить элементы по краям */
+    padding: 0 20px; /* Отступы */
+    border-bottom: 1px solid #e9ecef; /* Нижняя граница */
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidebar-header h1 {
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-email {
+    margin-right: 10px; /* Отступ между email и иконкой */
+    font-weight: 600;
+}
+
+.profile-icon {
+    background-color: #007bff; /* Цвет фона */
+    color: white;
+    border-radius: 50%; /* Круглая форма */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-decoration: none; /* Удалить подчеркивание ссылки */
+    cursor: pointer; /* Курсор указателя */
+}
+
+.profile-icon:hover {
+    background-color: #0056b3; /* Цвет фона при наведении */
+}
+
+
+/* Обновите высоту контейнера */
+.container {
+    display: flex;
+    height: calc(100vh - 70px); /* Учитывая высоту заголовка */
+}
+
+
+.profile-email {
+    margin-right: 10px;
+}
+
+
+
+.sidebar {
+    width: 230px;
+    background-color: #ffffff;
+    padding: 65px;
+    border: 1px solid #e9ecef;
+    padding-left: 30px;
+}
+
+.sidebar-header {
+    margin-top: calc(5% - 65px);
+    margin-left: calc(5% - 55px);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sidebar-header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidebar-header h1 {
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+/* Add other existing styles here */
+
+
+.sidebar .sidebar-item-dash img {
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.sidebar-item {
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	margin-bottom: 35px;
+	color: #343a40;
+}
+
+.sidebar-item img {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+.last-emails {
+	margin-top: 20px;
+	border-bottom: 1px solid #343a40;
+	padding-bottom: 230px;
+	width: 222px;
+}
+
+.last-emails h3 {
+	width: 222px;
+	margin-bottom: 10px;
+	border: 1px solid #343a40;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	font-size: 18px;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.email-list {
+	
+}
+
+.email-form {
+	flex: 1;
+}
+
+
+
+.email-header h4 {
+	margin-top: 20px;
+	border-bottom: none;
+	width: auto;
+	padding-left: 0;
+
+	height: 30px;
+	border-bottom: 1px solid #e9ecef;
+	font-weight: 600;
+	font-size: 22px;
+	margin-left: calc(5% - 73px);
+	padding-left: 40px;
+	padding-bottom: 20px;
+}
+.email-form h2 {
+	margin-top: 15px;
+	margin-left: 20px;
+	font-weight: 600;
+}
+
+.email-form form {
+	margin-top: 20px;
+	padding-right: 100px;
+}
+
+.email-form input,
+.email-form textarea {
+	padding: 10px;
+	margin-left: 45px;
+	margin-bottom: 15px;
+	border: 2px solid #495057;
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	width: 100%; 
+	outline: none;
+}
+
+.email-form button {
+	background-color: #006ad4;
+	color: #fff;
+	padding: 10px 10px 7px 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: 600;
+	margin-left: calc(5% - 10px);
+	margin-bottom: calc(5% - 65px);
+	margin-right: 0; 
+}
+
+.email-form button img {
+	width: 100px;
+	height: 20px;
+	margin-right: 5px;
+	margin-left: 1px;
+}
+
+.send-form {
+	width: 98%; 
+	height: 900px;
+	margin-top: calc(5% - 1px);
+	margin-left: 20px;
+	margin-right: 20px;
+	border-radius: 0px;
+	border: 2px solid #eaecf0;
+	box-shadow: 0px 0px 0px 20px #eaecf0;
+}
+
+.massage {
+	height: 366px;
+	resize: none;
+}
+
+.massage:focus {
+	border-bottom: 2px solid #007bff;
+	transition: border-bottom 0.3s ease;
+}
+.file-label {
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.file-label img {
+	width: 25px;
+	height: 25px;
+	padding-right: 40px;
+	margin-left: 190px;
+	margin-top: calc(5% - 85px);
+}
+
+
+input[type='file'] {
+	display: none;
+}
+.logout-button {
+	text-decoration: none;
+	margin-top: 20px;
+
+	margin-left: 65px;
+	padding: 10px 20px;
+	background-color: #006ad4;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-weight: 600;
+	cursor: pointer;
+}
+.sidebar-item-dash a,
+.sidebar-item a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: inherit;
+}
+.sidebar-item-dash a,
+.sidebar-item a {
+	display: block;
+	padding: 5px 100px 5px 5px;
+	text-decoration: none;
+	color: inherit;
+	border-radius: 5px;
+}
+
+
+.sidebar-item-dash a:hover,
+.sidebar-item-dash a:active,
+.sidebar-item a:hover,
+.sidebar-item a:active {
+	background-color: #006ad4;
+	transition: background-color 0.4s;
+	color: white;
+}
+
+
+.modal {
+	display: none; /* Скрыть модальное окно по умолчанию */
+	position: fixed; /* Фиксированное позиционирование относительно окна просмотра */
+	z-index: 1; /* Отображать поверх других элементов */
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto; /* Включить прокрутку при необходимости */
+	background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный черный фон */
+	display: flex; /* Flexbox для центрирования содержимого */
+	justify-content: center; /* Горизонтальное центрирование */
+	align-items: center; /* Вертикальное центрирование */
+}
+
+.modal-content {
+	background-color: #fefefe;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Ширина модального окна */
+	max-width: 600px; /* Максимальная ширина */
+	border-radius: 10px; /* Закругленные углы */
+	position: relative; /* Для позиционирования кнопки закрытия */
+}
+
+.close {
+	color: #aaa;
+	position: absolute; /* Абсолютное позиционирование */
+	top: 10px;
+	right: 15px;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Стили для кнопок в sidebar */
+.sidebar-item button {
+	display: flex;
+	align-items: center;
+	background-color: white;
+	color: black;
+	border: none;
+	padding: 10px 15px;
+	text-align: left;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	width: 100%;
+	box-sizing: border-box;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	border-radius: 10px; /* Закругленные углы */
+	margin: 5px 0; /* Отступы между кнопками */
+}
+
+.sidebar-item button:hover {
+	background-color: #006ad4;
+	color: white;
+}
+
+.sidebar-item button img {
+	margin-right: 10px;
+}
+
+
+.sidebar-item button:focus {
+	outline: none;
+}
+
+.sidebar-item button span {
+	flex-grow: 1;
+}
+
+
+.logout-button {
+	background-color: white;
+	color: black;
+	border: none;
+	padding: 10px 15px;
+	font-size: 16px;
+	cursor: pointer;
+	width: 100%;
+	box-sizing: border-box;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	border-radius: 10px; /* Закругленные углы */
+	margin: 5px 0; /* Отступы между кнопками */
+}
+
+.logout-button:hover {
+	background-color: #006ad4;
+	color: white;
+}

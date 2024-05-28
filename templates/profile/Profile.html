@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Изменение профиля</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Profile.css') }}"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="header">
+        <span>Welcome, {{ user['name'] }}</span>
+        <div class="profile-info">
+            <div class="profile-icon">{{ user['name'][0] }}{{ user['name'].split(' ')[1][0] if ' ' in user['name'] else '' }}</div>
+            <div class="profile-details">
+                <span>{{ user['name'] }}</span>
+                <span>{{ user['email'] }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="total-message">
+            <h2>Total message</h2>
+            <div class="message-count">0</div>
+        </div>
+
+        <div class="profile-form">
+            <form>
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> Enter new name</label>
+                    <input type="text" id="username" name="username" placeholder="Enter new name" />
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Enter new password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter new password" />
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password"><i class="fas fa-lock"></i> Retry the new password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Retry the new password" />
+                </div>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/Profile.js') }}"></script>
+</body>
+</html>

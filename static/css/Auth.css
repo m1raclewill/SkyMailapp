@@ -1,0 +1,137 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url('../images/RegistrationPic.svg');
+	background-size: cover;
+	background-position: center;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.registration-form {
+	box-sizing: border-box;
+
+	left: calc(50% - 690px / 2);
+	top: calc(50% - 545px / 2 - 72.5px);
+
+	background: rgba(88, 130, 193, 0.35);
+	backdrop-filter: blur(12.5px);
+
+	border-radius: 40px;
+}
+
+.registration-form h1 {
+	margin-left: 0px;
+	margin-top: calc(1% - 30px);
+	font-size: 35px;
+	font-weight: 600;
+	text-align: left;
+	color: rgb(255, 255, 255);
+	margin-bottom: 0px;
+}
+
+.registration-form h2 {
+	font-size: 30px;
+	font-weight: 600;
+	text-align: left;
+	margin-left: 0px;
+	color: rgb(255, 255, 255);
+}
+
+.registration-form p {
+	display: flex;
+	justify-content: center;
+	font-size: 15px;
+	margin-top: 5px;
+	color: rgb(255, 255, 255);
+}
+.registration-form input[type='email'],
+.registration-form input[type='password'] {
+	width: 50%;
+	padding: 20px;
+	margin-bottom: 46px;
+	border: none;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255);
+	color: #000000;
+	box-sizing: border-box;
+}
+
+.registration-form button {
+	display: flex;
+	justify-content: center;
+	margin-left: 120px;
+	margin-top: 15px;
+	display: flex;
+	justify-content: center;
+	width: 40%;
+	padding: 15px;
+	border: none;
+	border-radius: 10px;
+	background-color: #003465;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.5s;
+	font-size: 16px;
+}
+
+.registration-form button:hover {
+	display: flex;
+	justify-content: center;
+	background-color: #124979;
+}
+.registration-form {
+	width: 690px;
+	height: 545px;
+	padding: 93px;
+}
+
+.registration-form input[type='email'],
+.registration-form input[type='password'] {
+	width: calc(100% - 0px);
+	padding: 10px;
+}
+
+.registration-form button {
+	width: calc(50% - 0px);
+	padding: 10px;
+}
+.registration-form a {
+	color: #ffffff;
+	text-decoration: none;
+}
+.registration-form label {
+	text-align: left;
+	color: rgb(255, 255, 255);
+}
+.registration-form input[type='email']::placeholder,
+.registration-form input[type='password']::placeholder {
+	color: #bcbec0;
+}
+.registration-form input[type='email'],
+.registration-form input[type='password'] {
+	font-family: 'Poppins', sans-serif;
+}
+
+.registration-form button {
+	font-family: 'Poppins', sans-serif;
+}
+
+.registration-form p {
+	font-family: 'Poppins', sans-serif;
+}
+
+.registration-form a {
+	font-family: 'Poppins', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+body {
+	font-family: 'Poppins', sans-serif;
+}

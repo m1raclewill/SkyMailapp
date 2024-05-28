@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}" />
+</head>
+<body>
+    <div class="header">
+        <div class="sidebar-header">
+            <img src="{{ url_for('static', filename='images/sky-mail-icon.svg') }}" alt="Sky Mail Icon" />
+            <h1>Sky Mail</h1>
+        </div>
+        <div class="profile">
+            <span class="profile-email">{{ user['email'] }}</span>
+            <a href="{{ url_for('profile') }}" class="profile-icon">
+                {{ user['name'][0] }}{{ user['name'].split(' ')[1][0] if ' ' in user['name'] else '' }}
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-item">
+                <button onclick="openModal('inboxModal')">
+                    <img src="{{ url_for('static', filename='images/inbox-icon.svg') }}" alt="Inbox Icon" />
+                    <span>Inbox</span>
+                </button>
+            </div>
+            <div class="sidebar-item">
+                <button onclick="openModal('sentModal')">
+                    <img src="{{ url_for('static', filename='images/sent-icon.svg') }}" alt="Sent Icon" />
+                    <span>Sent</span>
+                </button>
+            </div>
+            <div class="sidebar-item">
+                <button onclick="openModal('deleteModal')">
+                    <img src="{{ url_for('static', filename='images/delete-icon.svg') }}" alt="Delete Icon" />
+                    <span>Delete</span>
+                </button>
+            </div>
+            <div class="last-emails">
+                <h3>Last emails</h3>
+                <div class="email-list">
+                    <!-- Здесь будут последние письма -->
+                </div>
+            </div>
+            <button class="logout-button" id="logoutButton" onclick="logout()">Logout</button>
+        </div>
+        <div class="email-form">
+            <div class="email-header"></div>
+            <div class="send-form">
+                <div class="compose-section">
+                    <h2>Write email</h2>
+                </div>
+                <form action="#">
+                    <input type="text" placeholder="Кому" />
+                    <input type="text" placeholder="Тема" />
+                    <textarea class="massage" placeholder="Сообщение"></textarea>
+                    <button type="submit">
+                        <img src="{{ url_for('static', filename='images/send-icon.svg') }}" alt="Send Icon" />
+                    </button>
+                    <label class="file-label">
+                        <input type="file" />
+                        <img src="{{ url_for('static', filename='images/attachment-icon.svg') }}" alt="Attachment Icon" />
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальные окна -->
+
+    <div id="inboxModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('inboxModal')">&times;</span>
+            <h2>Inbox</h2>
+            <p>Входящие письма</p>
+        </div>
+    </div>
+
+    <div id="sentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('sentModal')">&times;</span>
+            <h2>Sent</h2>
+            <p>Отправленные письма</p>
+        </div>
+    </div>
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('deleteModal')">&times;</span>
+            <h2>Delete</h2>
+            <p>Удаленные письма</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/Home.js') }}"></script>
+</body>
+</html>
